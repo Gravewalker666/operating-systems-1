@@ -2,6 +2,8 @@
 #include <stddef.h>
 #include "mymalloc.h"
 
+struct block* freeList = (void*) memory;
+
 void initialize () {
 	freeList->size = 25000 - sizeof(struct block);
 	freeList->isFree = 1;

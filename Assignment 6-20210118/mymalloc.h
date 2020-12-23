@@ -1,5 +1,5 @@
-#ifndef MYMALLOC_H
-#define MYMALLOC_H
+#ifndef MYMALLOC_DOT_H
+#define MYMALLOC_DOT_H
 
 #include <stdio.h>
 #include <stddef.h>
@@ -11,8 +11,6 @@ struct block {
 	int isFree;
 	struct block *next;
 };
-
-struct block *freeList = (void*) memory;
 
 void initilize ();
 void split (struct block*, size_t);

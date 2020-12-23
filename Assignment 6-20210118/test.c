@@ -8,5 +8,7 @@ int main () {
 		printf("%p \n", ptr+i);
 	}
 
+	myFree(ptr);
+
 	return 0;
 }
