@@ -17,6 +17,7 @@ void split (struct block*, size_t);
 void* myMalloc (size_t);
 void merge ();
 void myFree (void*);
+void printMemory();
 
 #endif
 

@@ -61,8 +61,18 @@ void merge () {
 }
 
 void myFree (void *ptr) {
-	struct block *current = --ptr;
+	struct block *current = ptr;
+	current--;
 	current->isFree = 1;
 	merge();
+}
+
+void printMemory () {
+	struct block *current = freeList;
+	printf("Memory Chunks:\n");
+	while (current) {
+		printf("- Size: %zu, Free: %d\n", current->size, current->isFree);
+		current = current->next;
+	}
 }
 
